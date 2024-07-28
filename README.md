@@ -32,7 +32,7 @@ The Combiner Utility is a Java library that generates all possible combinations 
 
 ### Usage Sample
 ```
-src/main/java/com/jaisocx/tools/combiner/CombinerSample.java
+// src/main/java/com/jaisocx/tools/combiner/CombinerSample.java
 
 List<String> currencyValues = Arrays.asList("USD", "EUR", "CHF");
 List<Boolean> booleanValues = Arrays.asList(true, false);
@@ -53,7 +53,7 @@ combinations.forEach(combinationItem -> combinationItemUsageSample (
 
 /* sample method call to use in a one-level loop, using combinations */
 public static void combinationItemUsageSample(String currency, boolean isSuggestionValid) {
-  System.out.println(currnecy + " " + isSuggestionValid);
+  System.out.println(currency + " " + isSuggestionValid);
 }
 
 ```
