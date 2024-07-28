@@ -17,6 +17,19 @@ The Combiner Utility is a Java library that generates all possible combinations 
 - Less dangerous one-level loop, instead of multilevel included sub-loops
 - Easy to use
 
+### Keywords
+- Java
+- combinations
+- permutations
+- testing
+- utility
+- Combiner
+- Java21
+- functional programming
+- dataset manipulation
+- enum combinations
+
+
 ### Usage Sample
 ```
 src/main/java/com/jaisocx/tools/combiner/CombinerSample.java
