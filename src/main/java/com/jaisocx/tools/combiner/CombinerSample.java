@@ -23,27 +23,27 @@ public class CombinerSample {
     CombinerSample.combine();
   }
   public static void combine() {
-        /*List<EnumType1> enum1Values = Arrays.asList(EnumType1.values());
-        List<EnumType2> enum2Values = Arrays.asList(EnumType2.values());
-        List<EnumType3> enum3Values = Arrays.asList(EnumType3.values());
-        List<EnumType4> enum4Values = Arrays.asList(EnumType4.values());
-        List<EnumType5> enum5Values = Arrays.asList(EnumType5.values());*/
-        
-        List<UrlsRequested> urlsRequesteds = Arrays.asList(UrlsRequested.values());
-        List<PathValue> pathValue = Arrays.asList(PathValue.values());
-        List<String> currencyValues = Arrays.asList("USD", "EUR", "CHF");
-        List<Boolean> booleanValues = Arrays.asList(true, false);
+    /*List<EnumType1> enum1Values = Arrays.asList(EnumType1.values());
+    List<EnumType2> enum2Values = Arrays.asList(EnumType2.values());
+    List<EnumType3> enum3Values = Arrays.asList(EnumType3.values());
+    List<EnumType4> enum4Values = Arrays.asList(EnumType4.values());
+    List<EnumType5> enum5Values = Arrays.asList(EnumType5.values());*/
+    
+    List<UrlsRequested> urlsRequested = Arrays.asList(UrlsRequested.values());
+    List<PathValue> pathValue = Arrays.asList(PathValue.values());
+    List<String> currencyValues = Arrays.asList("USD", "EUR", "CHF");
+    List<Boolean> booleanValues = Arrays.asList(true, false);
 
-        // Generate all combinations
-        List<List<Object>> combinations = Combiner.combine (
-            urlsRequesteds,
-            pathValue,
-            currencyValues,
-            booleanValues
-        );
+    // Generate all combinations
+    List<List<Object>> combinations = Combiner.combine (
+        urlsRequested,
+        pathValue,
+        currencyValues,
+        booleanValues
+    );
 
-        // use all combinations less dangerous in a one-level loop
-        CombinerSample.combinationsUsageSample(combinations);
+    // use all combinations less dangerous in a one-level loop
+    CombinerSample.combinationsUsageSample(combinations);
   }
   
   public static void combinationsUsageSample(List<List<Object>> combinations) {
