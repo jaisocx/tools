@@ -3,17 +3,24 @@ package com.jaisocx.tools.combiner;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @usage: the Combiner class produces full set of all unique combinations of any number of input arguments, those are values sets,
+ *         to use later in one-level loop, avoiding multi-level loops.
+ *         I use in Java UnitTest methods, to check out, that each argument value combination doesn't lead to tested functionlity error.
+ * @advantage: one-level loop implementation, more code review friendly. variable arguments number, easy to use with Strings, enums, oher data types.
+ * @author: Illia Polianskyi
+ * @since: 2024-07-29
+ */
 public class Combiner {
 
-  @SafeVarargs
-  //public static <T> List<List<T>> combine(List<T>... lists) {
   public static List<List<Object>> combine(List<?>... lists) {
     List<List<Object>> combinations = new ArrayList<>();
 
     long iterationsCount = lists.length;
-    
+    int[] listItemSize = new int[lists.length];
     for (int i = 0; i < lists.length; i++) {
-      List<Object> list = (List<Object>)lists[i];
+      List<Object> list = (List<Object>) lists[i];
+      listItemSize[i] = list.size();
       iterationsCount = iterationsCount * list.size();
     }
 
@@ -45,7 +52,7 @@ public class Combiner {
         // inner iteration inc to next index
         for (int j = listItemIndexLast; j >= 0; j--) {
           listsInnerLoops[j] += 1;
-          if (listsInnerLoops[j] >= lists[j].size()) {
+          if (listsInnerLoops[j] >= listItemSize[j]) {
             listsInnerLoops[j] = 0;
           } else {
             break;
